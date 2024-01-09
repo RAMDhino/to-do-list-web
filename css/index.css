@@ -58,6 +58,10 @@ body {
     padding-inline-start: 30px;
 }
 
+.main-list > .list-item-adder > textarea {
+  display: none;
+}
+
 input[type="checkbox"] + label::before {
     content: "";
     position: absolute;
@@ -70,4 +74,14 @@ input[type="checkbox"] + label::before {
 
 input[type="checkbox"]:checked + label::before {
     background-color: green;
+}
+
+.task {
+    position: relative;
+}
+
+.check-icon {
+    position: absolute;
+    left: 0.13rem;
+    top: -0.13rem;
 }
