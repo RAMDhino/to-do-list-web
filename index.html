@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/Line Awesome/1.3.0/css/line-awesome.min.css">
     <title>To-Do List Web</title>
 </head>
 <body>
@@ -12,15 +13,23 @@
             Checkify!
         </h1>
         <div id="main_list" class="main-list">
-            <div class="list-item-1">
+            <div class="task list-item-1">
+                <div class="check-icon"><i class="las la-check"></i></div>
                 <input type="checkbox" name="checkbox_1" id="checkbox_1">
                 <label for="checkbox_1">Wake Up</label>
             </div>
-            <div class="list-item-2">
+            <div class="task list-item-2">
+                <div class="check-icon"><i class="las la-check"></i></div>
                 <input type="checkbox" name="checkbox_2" id="checkbox_2">
                 <label for="checkbox_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, delectus nam beatae voluptas quae aliquid ex rem odio tempore quos magni. Rerum expedita laboriosam repellat error eaque nisi optio ullam.</label>
             </div>
-            <div class="list-item-adder"></div>
+            <div class="list-item-adder">
+              <input type="checkbox" name="checkbox_n" id="checkbox_n">
+              <label for="checkbox_n">Add List</label>
+              <textarea>
+                
+              </textarea>
+            </div>
         </div>
     </section>
 </body>
