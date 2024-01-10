@@ -76,5 +76,5 @@ input[type="checkbox"] + label::before {
 
 input[type="checkbox"]:checked + label::before {
     background-color: #2a2a2a;
-    background-image: url("icons/check-solid.svg");
+    background-image: url("icons/check-solid-white.svg");
 }
