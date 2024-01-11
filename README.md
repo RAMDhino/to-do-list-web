@@ -1,2 +1,2 @@
-# to-do-list-web
+# Checkify!
 A simple To-Do List Website
