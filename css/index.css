@@ -27,7 +27,7 @@ body {
 }
 
 .main-container > * {
-    margin-block-end: 0.5em;
+    margin-block-end: 2em;
 }
 
 .main-heading > h1 {
@@ -40,7 +40,7 @@ body {
 }
 
 .main-list {
-    width: clamp(19.75rem, 100vw, 30rem);
+    width: clamp(19.75rem, 90vw, 30rem);
     margin: 0 auto;
     padding: 1rem;
     display: grid;
@@ -70,11 +70,18 @@ input[type="checkbox"] + label::before {
     left: 0;
     width: 20px;
     height: 20px;
-    border: solid 2px black;
+    border: solid 2px #2a2a2a;
     border-radius: 5px;
 }
 
 input[type="checkbox"]:checked + label::before {
-    background-color: #2a2a2a;
-    background-image: url("icons/check-solid-white.svg");
+    background-color: var(--checklist-color);
+    background-image: url("icons/check-done.svg");
+    background-size: cover;
+    border-color: var(--checklist-color);
+}
+
+.stroke-label {
+    color: gray;
+    text-decoration: line-through;
 }
