@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>To-Do List Web</title>
 </head>
 <body>
@@ -24,15 +24,15 @@
                 <input type="checkbox" name="checkbox_3" id="checkbox_3">
                 <label for="checkbox_3">Debugging the last night errors</label>
             </div>
-            <div class="list-item-adder">
-              <input type="checkbox" name="checkbox_n" id="checkbox_n">
-              <label for="checkbox_n">Add List</label>
-              <textarea>
+            <div class="task-adder list-item-adder" id="task_adder">
+              <button class="add-icon"></button>
+              <label>Adding a Task ...</label>
+              <textarea class="task-paper" id="task_paper">
                 
               </textarea>
             </div>
         </div>
     </section>
-    <script src="./js/index.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
