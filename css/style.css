@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "heading";
+    src: url("./font/ShantellSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "text";
+  src: url("./font/ShantellSans-Light.ttf");
+}
+
+:root {
+    --60-color: hsl(15, 12.9%, 12.2%);
+    --gray-text-15: hsl(330, 0.8%, 17.9%);
+    --gray-text-25: hsl(330, 0.8%, 27.9%);
+    --gray-text-50: hsl(330, 0.8%, 52.9%);
+    --gray-text-75: hsl(330, 0.8%, 78.9%);
+    --checklist-color: hsl(91.5, 38.5%, 40.8%);
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+textarea {
+    background-color: inherit;
+    font-family: "text", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    padding: 5%;
+    resize: vertical;
+}
+
+.main-container {
+    margin: 0 auto;
+    max-width: min(100vw, 43.125rem);
+}
+
+.main-container > * {
+    margin-block-end: 2em;
+}
+
+.main-heading > h1 {
+    color: #FAFAFA;
+    background-color: var(--60-color);
+    font-family: "heading";
+    font-size: clamp(2rem, 11vw, 4.75rem);
+    text-align: center;
+    padding-block: 0.5em;
+}
+
+.main-list {
+    max-width: clamp(1rem, 90vw, 30rem);
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-gap: 1em;
+}
+
+.main-list > :is(.task, .task-adder) {
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.main-list > .task-adder {
+    color: var(--gray-text-15);
+    background-color: var(--gray-text-75);
+}
+
+.main-list input[type="checkbox"] {
+    display: none;
+}
+
+.main-list :where(input[type="checkbox"], .add-icon) + label {
+    font-family: "text", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 1.9rem;
+}
+
+.main-list > .list-item-adder > textarea {
+  display: none;
+}
+
+input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: solid 2px var(--60-color);
+    border-radius: 5px;
+}
+
+input[type="checkbox"]:checked + label::before {
+    background-color: var(--checklist-color);
+    background-image: url("./icons/check-done.svg");
+    background-size: cover;
+    border-color: var(--checklist-color);
+}
+
+.list-item-adder {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+button.add-icon {
+    display: none;
+}
+
+button.add-icon + label::before {
+    content: "";
+    background-color: var(--60-color);
+    background-image: url('./icons/white-add-icon.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border: solid 2px var(--60-color);
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+textarea.task-paper {
+    border: none;
+    outline: none;
+}
+
+.stroke-label {
+    color: var(--gray-text-25);
+    text-decoration: line-through;
+}
