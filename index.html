@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>To-Do List Web</title>
+    <title>Checkify - To-Do List Web</title>
 </head>
 <body>
     <section id="main_container" class="main-container">
@@ -12,24 +12,10 @@
             <h1>Checkify!</h1>
         </header>
         <div id="main_list" class="main-list">
-            <div class="task list-item-1">
-                <input type="checkbox" name="checkbox_1" id="checkbox_1">
-                <label for="checkbox_1">Wake Up</label>
-            </div>
-            <div class="task list-item-2">
-                <input type="checkbox" name="checkbox_2" id="checkbox_2">
-                <label for="checkbox_2">Grab a mug of coffee</label>
-            </div>
-            <div class="task list-item-3">
-                <input type="checkbox" name="checkbox_3" id="checkbox_3">
-                <label for="checkbox_3">Debugging the last night errors</label>
-            </div>
-            <div class="task-adder list-item-adder" id="task_adder">
-              <button class="add-icon"></button>
-              <label>Adding a Task ...</label>
-              <textarea class="task-paper" id="task_paper">
-                
-              </textarea>
+            <div id="task_adder" class="task-adder">
+              <button id="add_icon" class="add-icon"></button>
+              <label for="add_task_button">Click this to add a task!</label>
+              <textarea id="task_paper" class="task-paper" placeholder="I think I have to ..."></textarea>
             </div>
         </div>
     </section>
