@@ -9,7 +9,7 @@
 }
 
 :root {
-    --60-color: hsl(15, 12.9%, 12.2%);
+    --60-color: hsl(15, 13%, 12%);
     --gray-text-15: hsl(330, 0.8%, 17.9%);
     --gray-text-25: hsl(330, 0.8%, 27.9%);
     --gray-text-50: hsl(330, 0.8%, 52.9%);
@@ -84,12 +84,34 @@ textarea {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    padding-left: 1.9rem;
+    padding-inline-start: 1.9rem;
 }
 
-.main-list > .list-item-adder > textarea {
+.main-list > .task-adder > textarea {
   display: none;
 }
+
+.task {
+    overflow-wrap: break-all;
+    hyphens: auto;
+}
+
+.task :nth-child(2) {
+    flex: 1 1 100%;
+}
+
+.task-adder, .task {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.task-adder {
+    cursor: pointer;
+    user-select: none;
+}
+
 
 input[type="checkbox"] + label::before {
     content: "";
@@ -107,12 +129,6 @@ input[type="checkbox"]:checked + label::before {
     background-image: url("./icons/check-done.svg");
     background-size: cover;
     border-color: var(--checklist-color);
-}
-
-.list-item-adder {
-    position: relative;
-    cursor: pointer;
-    user-select: none;
 }
 
 button.add-icon {
@@ -136,6 +152,14 @@ button.add-icon + label::before {
 textarea.task-paper {
     border: none;
     outline: none;
+}
+
+.delete-icon {
+    background-image: url("./icons/delete-icon.svg");
+    background-size: cover;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
 }
 
 .stroke-label {
