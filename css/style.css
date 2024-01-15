@@ -92,26 +92,22 @@ textarea {
 }
 
 .task {
+    display: grid;
+    grid-template-columns: auto 1.4rem;
+    grid-gap: 0.5em;
+    word-break: break-all;
     overflow-wrap: break-all;
     hyphens: auto;
 }
 
 .task :nth-child(2) {
-    flex: 1 1 100%;
-}
-
-.task-adder, .task {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    position: relative;
+  font-size: inherit;
 }
 
 .task-adder {
     cursor: pointer;
     user-select: none;
 }
-
 
 input[type="checkbox"] + label::before {
     content: "";
@@ -154,12 +150,12 @@ textarea.task-paper {
     outline: none;
 }
 
-.delete-icon {
-    background-image: url("./icons/delete-icon.svg");
+.remove-icon {
+    background-image: url("./icons/remove-icon.svg");
     background-size: cover;
-    width: 21px;
-    height: 21px;
-    display: inline-block;
+    aspect-ratio: 1 / 1;
+    width: 1.4rem;
+    display: block;
 }
 
 .stroke-label {
