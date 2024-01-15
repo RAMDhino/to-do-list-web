@@ -62,11 +62,11 @@ let makeNewTask = taskText => {
     let newTask_Text = makeNewLabel(taskText, checkboxID);
 
     // Trash / Delete Icon
-    let deleteIcon = document.createElement("div");
-    deleteIcon.setAttribute("class", "delete-icon");
-    deleteIcon.style.display = "none";
+    let removeIcon = document.createElement("div");
+    removeIcon.setAttribute("class", "remove-icon");
+    removeIcon.style.display = "none";
 
-    deleteIcon.addEventListener("click", () => {
+    removeIcon.addEventListener("click", () => {
         mainList.removeChild(newTask);
         checkTotalTasks();
     });
@@ -74,14 +74,14 @@ let makeNewTask = taskText => {
     
     newTask.appendChild(newTask_Checkbox.checkbox); 
     newTask.appendChild(newTask_Text);
-    newTask.appendChild(deleteIcon);
+    newTask.appendChild(removeIcon);
 
     newTask.addEventListener("mouseout", () => {
-        deleteIcon.style.display = "none";
+        removeIcon.style.display = "none";
     });
 
     newTask.addEventListener("mouseover", () => {
-        deleteIcon.style.display = "inline-block";
+        removeIcon.style.display = "block";
     });
 }
 
@@ -108,7 +108,7 @@ taskPaper.addEventListener("keydown", (event) => {
     }
 });
 
-taskPaper.addEventListener("touch", (event) => {
+taskPaper.addEventListener("input", (event) => {
     let inputValue = event.target.value;
     if (event.data && event.data.includes("\n")) {
         inputValue = event.target.value.replace(/\n/g, "");
