@@ -59,7 +59,7 @@ textarea {
 
 .main-list {
     max-width: clamp(1rem, 90vw, 30rem);
-    margin: 0 auto;
+    margin: 3em auto;
     padding: 1rem;
     display: grid;
     grid-gap: 1em;
@@ -161,4 +161,18 @@ textarea.task-paper {
 .stroke-label {
     color: var(--gray-text-25);
     text-decoration: line-through;
+}
+
+@media (min-width: 45rem) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-container { 
+        margin: max(5vmin, 5vmax) auto;
+        border: solid 2px var(--60-color);
+        flex-grow: 1;
+    }
 }
