@@ -98,6 +98,11 @@ textarea {
     word-break: break-all;
     overflow-wrap: break-all;
     hyphens: auto;
+    transition: background-color 0.5s ease;
+}
+
+.task:hover {
+    background-color: var(--gray-text-75);
 }
 
 .task :nth-child(2) {
@@ -134,7 +139,7 @@ button.add-icon {
 button.add-icon + label::before {
     content: "";
     background-color: var(--60-color);
-    background-image: url('./icons/white-add-icon.png');
+    background-image: url('./icons/add-icon.svg');
     background-size: cover;
     width: 20px;
     height: 20px;
@@ -156,6 +161,7 @@ textarea.task-paper {
     aspect-ratio: 1 / 1;
     width: 1.4rem;
     display: block;
+    transition: background-image 0.25s ease-in-out;
 }
 
 .stroke-label {
